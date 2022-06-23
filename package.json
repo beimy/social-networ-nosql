@@ -1,0 +1,25 @@
+{
+  "name": "social-network-nosql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon run server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beimy/social-network-nosql.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beimy/social-network-nosql/issues"
+  },
+  "homepage": "https://github.com/beimy/social-network-nosql#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.0",
+    "nodemon": "^2.0.16"
+  }
+}
