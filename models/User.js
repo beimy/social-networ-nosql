@@ -20,28 +20,26 @@ const UserSchema = new Schema(
                 ref: 'Thought'
             }
         ],
-    //     friends : [
-    //         {
-    //             type: Schema.Types.ObjectId,
-    //             ref: 'User'
-    //         }
-    //     ],
-    // },
-    // {
-    //     toJSON: {
-    //         virtuals: true,
-    //         getters: true
-    //     },
-    //     id: false
+        friends : [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'User'
+            }
+        ],
+    },
+    {
+        toJSON: {
+            virtuals: true,
+            getters: true
+        },
+        id: false
     }
 );
 
 // get total number of friends
-// UserSchema.virtual('friendCount').get(function() {
-//     return this.friends.reduce(
-//     (total, friend) => total + friend
-//     )
-// })
+UserSchema.virtual('friendCount').get(function() {
+    return this.friends.length;
+})
 
 // create the Pizza model using the PizzaSchema
 const User = model('User', UserSchema);
